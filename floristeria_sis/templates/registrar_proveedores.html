@@ -1,0 +1,18 @@
+﻿{include file="cabecera.html" title="Registrar Proveedores"}
+{if $smarty.session.mensaje}
+</p>
+<div class="mensaje">{$smarty.session.mensaje}</div>
+{/if}
+{$f1}
+{include file="pie.html"}
+{literal}
+<script>
+	var f1 = new LiveValidation('rif'); f1.add( Validate.Presence ); f1.add( Validate.Length, { minimum: 7 } );
+	var f2 = new LiveValidation('razon_social'); f2.add( Validate.Presence ); 
+	var f3 = new LiveValidation('persona_contacto'); f3.add( Validate.Presence ); 
+	var f4 = new LiveValidation('direccion'); f4.add( Validate.Presence ); 
+	var f5 = new LiveValidation('fax'); f5.add( Validate.Length, { minimum: 7 } );
+	var f6 = new LiveValidation('telf_fijo'); f6.add( Validate.Presence ); f6.add( Validate.Length, { minimum: 7 } );
+	var f9 = new LiveValidation('correo'); f9.add( Validate.Email );
+</script>
+{/literal}

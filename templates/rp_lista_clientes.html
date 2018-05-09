@@ -1,0 +1,22 @@
+{include file="cabecera.html" title="Listado de Clientes"}
+<div id="resultados">
+<h3>LISTADO DE CLIENTES</h3>
+<table class="enhancedtable" cellspacing="0" cellpadding = "3" border="1" align="center" width="100%">
+	<tr> 
+		<th>Cédula o Rif</th>
+		<th>Razon Social</th>
+		<th>Direccion</th>
+		<th>Telefono Fijo</th>
+		<th>Telefono Movil</th>
+		<th>Correo</th>
+	</tr>
+	{section name=p loop=$datos}
+	<tr>
+		<td>{$datos[p].id}</td>
+		<td>{$datos[p].razon}</td>
+		<td>{$datos[p].tlf_fijo}</td>
+		<td>{$datos[p].correo}</td>
+	</tr>{/section}
+</table>
+</div>
+{include file="pie.html"}

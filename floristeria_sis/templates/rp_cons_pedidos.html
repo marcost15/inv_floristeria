@@ -1,0 +1,28 @@
+{include file="cabecera.html" title="Lista de Pedidos"}
+<div id="resultados">
+<h3>PEDIDOS</h3>
+<p>
+<div id = "indice">Total de Pedidos: {$n}</br>
+		{section name=z loop=$indice}
+		<a href="?li={$indice[z].li}">[{$indice[z].li}-{$indice[z].ls}]</a> {/section}<a href="?accion=todos">[Todos]</a>
+	</div>
+</p>
+<table class="enhancedtable" border="1" cellspacing="3" cellpadding="3" width="100%">
+	<tr> 
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+		<th>Fecha</th>
+		<th>Personal</th>
+		<th>Observación</th>
+	</tr>
+	{section name=p loop=$datos}
+	<tr class="linea{cycle values='1,2'}">
+	    <th>{$smarty.section.p.index_next}</th>
+		<td><a href="rp_detalle_pedidos.php?id={$datos[p].id}"><img onmouseover='overlib("<strong>Examinar</strong>",WIDTH, 70)' src="./imagenes/ver.ico" onmouseout='return nd();'/></a></td>
+		<td><b>{$datos[p].fecha}</b></td>
+		<td>{$datos[p].personal_id}</td>
+		<td>{$datos[p].observacion}</td>
+	</tr>{/section}
+</table>
+</div>
+{include file="pie.html"}

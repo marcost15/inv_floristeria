@@ -1,0 +1,19 @@
+{include file="cabecera.html" title="Detalle Pedido"}
+<div id="resultados">
+<h3>PEDIDO</h3>
+<p>
+<div id = "indice">Fecha: {$pedido.fecha}<br> Personal: {$pedido.personal_id}<br> Cliente: {$pedido.cliente_id}<br> Observación: {$pedido.observacion}
+	</div>
+</p>
+<table class="enhancedtable" border="1" cellspacing="3" cellpadding="3" width="100%">
+	<tr> 
+		<th><h3>ARTICULO</h3></th>
+	</tr>
+	{section name=p loop=$datos}
+	<tr>
+		<td>{$datos[p].articulo_id}</td>
+	</tr>{/section}
+</table>
+
+</div>
+{include file="pie.html"}

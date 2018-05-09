@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>MISION</title>
+<link rel="stylesheet" href="misi_css.css" type="text/css" />
+<script type="text/javascript">
+<!--
+var time = 3000;
+var numofitems = 7;
+
+//menu constructor
+function menu(allitems,thisitem,startstate){ 
+  callname= "gl"+thisitem;
+  divname="subglobal"+thisitem;  
+  this.numberofmenuitems = allitems;
+  this.caller = document.getElementById(callname);
+  this.thediv = document.getElementById(divname);
+  this.thediv.style.visibility = startstate;
+}
+
+//menu methods
+function ehandler(event,theobj){
+  for (var i=1; i<= theobj.numberofmenuitems; i++){
+    var shutdiv =eval( "menuitem"+i+".thediv");
+    shutdiv.style.visibility="hidden";
+  }
+  theobj.thediv.style.visibility="visible";
+}
+				
+function closesubnav(event){
+  if ((event.clientY <48)||(event.clientY > 107)){
+    for (var i=1; i<= numofitems; i++){
+      var shutdiv =eval('menuitem'+i+'.thediv');
+      shutdiv.style.visibility='hidden';
+    }
+  }
+}
+// -->
+</script>
+<style type="text/css">
+<!--
+.Estilo9 {font-size: 16px; }
+-->
+</style>
+</head>
+<body >
+<div id="pagecell1">
+<div id="venida">
+
+</div>
+
+    <h3 align="center" style="margin-left:250px; margin-right:100px; font-size:20px;"> <strong>CONT&Aacute;CTANOS INVERSIONES CEPEDA COGUA</strong></h3>
+ 
+     
+        <p align="justify" align="center" style="margin-left:250px; margin-right:100px; font-size:17px;"> Urbanizaci&oacute;n Numa Quevedo calle 3 casa N&deg; 56 Parroquia La Mesa de Esnujaque, municipio Urdaneta, estado Trujillo.
+        
+        <p align="justify" align="center" style="margin-left:250px; margin-right:100px; font-size:17px;">Ligia Marlen Cepeda Cogua
+        0416 - 8711138
+        
+        <p align="justify" align="center" style="margin-left:250px; margin-right:100px; font-size:17px;">Carmen de Jes&uacute;s Barrios Sulbaran
+        0416 - 0705173
+        
+        <p align="justify" align="center" style="margin-left:250px; margin-right:100px; font-size:17px;">ligiacepeda@gmail.com
+        <p align="justify" align="center" style="margin-left:250px; margin-right:100px; font-size:17px;">lyudith@gmail.com
+        </p>
+     
+  
+  </div>  
+  </div>
+<blockquote>
+  <p class="Estilo9">
+    <!--end pagecell1-->
+    <br />
+  </p>
+</blockquote>
+<script type="text/javascript">
+    <!--
+      var menuitem1 = new menu(7,1,"hidden");
+			var menuitem2 = new menu(7,2,"hidden");
+			var menuitem3 = new menu(7,3,"hidden");
+			var menuitem4 = new menu(7,4,"hidden");
+			var menuitem5 = new menu(7,5,"hidden");
+			var menuitem6 = new menu(7,6,"hidden");
+			var menuitem7 = new menu(7,7,"hidden");
+    // -->
+    </script>
+</body>
+</html>

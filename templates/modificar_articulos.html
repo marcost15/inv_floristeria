@@ -1,0 +1,9 @@
+﻿{include file="cabecera.html" title="Modificar Articulos"}
+{$f1}
+{include file="pie.html"}
+{literal}
+<script>
+	var f2 = new LiveValidation('descripcion'); f2.add( Validate.Presence ); 
+	var f3 = new LiveValidation('precio'); f3.add( Validate.Presence ); 
+</script>
+{/literal}
